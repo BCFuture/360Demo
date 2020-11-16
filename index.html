@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    
+</head>
+<body>
+<div id="container">
+    <div id="panorama"></div>
+</div>
+<script>
+pannellum.viewer('panorama', {
+
+    "default": {
+        "firstScene": "Entrance",
+        "author": "Stormstudio",
+        "sceneFadeDuration": 1000
+    },
+
+    "scenes": {
+        "Entrance": {
+            "title": "Entrance",
+            "hfov": 110,
+            "pitch": 0,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://farm66.static.flickr.com/65535/50608651922_098d15e5c7_o.jpg",
+            "preview": "https://farm66.static.flickr.com/65535/50607978223_6ee831d9e3_z.jpg",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": 10,
+                    "yaw": 28,
+                    "type": "info",
+                    "text": "Light of Interior",
+                    "URL": "https://stormstudio.site"
+                },
+                {
+                    "pitch": 6,
+                    "yaw": -20,
+                    "type": "info",
+                    "text": "Painting",
+                    "URL": "https://stormstudio.site"
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 180,
+                    "type": "info",
+                    "text": "Door",
+                    "URL": "https://stormstudio.site"
+                },
+                {
+                    "pitch": -13,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Middle of Interior",
+                    "sceneId": "Middle"
+                },  
+                {
+                    "pitch": 2,
+                    "yaw": 5,
+                    "type": "scene",
+                    "text": "Window of Interior",
+                    "sceneId": "Window",
+                    "targetYaw": 100,
+                    "targetPitch": 0,
+                },  
+            ]
+        },
+
+        "Middle": {
+            "title": "Middle of Interior",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://farm66.static.flickr.com/65535/50608532631_838054f826_o.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": -33,
+                    "type": "info",
+                    "text": "Television",
+                    "URL": "https://stormstudio.site"
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 195,
+                    "type": "scene",
+                    "text": "Interior Entrance",
+                    "sceneId": "Entrance",
+                    "targetYaw": 0,
+                    "targetPitch": 0,
+                },
+                {
+                    "pitch": -4,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Window of Interior",
+                    "sceneId": "Window",
+                    "targetYaw": 100,
+                    "targetPitch": 0,
+                },  
+            ]
+        },
+        
+        "Window": {
+            "title": "Windows of Interior",
+            "hfov": 130,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://farm66.static.flickr.com/65535/50608532331_7eed260876_o.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 17,
+                    "yaw": 65,
+                    "type": "info",
+                    "text": "Lamp",
+                    "URL": "https://stormstudio.site"
+                },
+                {
+                    "pitch": -13,
+                    "yaw": 95,
+                    "type": "info",
+                    "text": "Sofa",
+                    "URL": "https://stormstudio.site"
+                },
+                {
+                    "pitch": 0.6,
+                    "yaw": 187,
+                    "type": "scene",
+                    "text": "Interior Entrance",
+                    "sceneId": "Entrance",
+                    "targetYaw": 0,
+                    "targetPitch": 0,
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 170,
+                    "type": "scene",
+                    "text": "Middle Entrance",
+                    "sceneId": "Middle",
+                    "targetYaw": 90,
+                    "targetPitch": 0,
+                }
+            ]
+        },
+    }
+});
+</script>
+
+</body>
+</html>
