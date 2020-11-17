@@ -1,5 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Karla:400,700);
 
+#preloader {
+    /* Images you want to preload*/
+    background-image: url(https://farm66.static.flickr.com/65535/50611933791_9fac931d4a_o.jpg);
+    background-image: url(https://farm66.static.flickr.com/65535/50611186958_79f4e84c5c_o.jpg);
+    background-image: url(https://farm66.static.flickr.com/65535/50611933701_7f68535a80_o.jpg);
+    width: 0px;
+    height: 0px;
+    display: inline;
+    }
+
 body {
     margin: 0;
 	padding: 0;
@@ -34,3 +44,7 @@ body {
     width: 1280px;
     height: 720px;
 }
+.pnlm-load-box {
+    z-index:-999;
+    opacity: 0;
+ }
